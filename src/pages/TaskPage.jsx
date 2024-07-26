@@ -14,7 +14,7 @@ const TaskPage = () => {
   return (
     <div className="d-flex">
       {tasks.map((task) => (
-        <div className="" key={task._id}>
+        <div key={task._id}>
           <TaskCard task={task} />
         </div>
       ))}

@@ -4,11 +4,12 @@ import { useTasks } from "../../context/TaskContext";
 import days from "dayjs";
 import utc from "dayjs/plugin/utc";
 days.extend(utc);
+import "./TaskCard.css";
 
 const TaskCard = ({ task }) => {
   const { deleteTask } = useTasks();
   return (
-    <div className="card my-2 m-2">
+    <div className="card task-card my-2 m-2 shadow-sm">
       <div className="card-body p-4">
         <h5 className="card-title">{task.title}</h5>
         <p className="card-text">{task.description}</p>
