@@ -7,14 +7,14 @@ const TaskPage = () => {
 
   useEffect(() => {
     getTasks();
-  }, []);
+  }, [getTasks]);
 
   if (tasks.length === 0) return <h1>no tasks</h1>;
 
   return (
-    <div className="row">
+    <div className="d-flex">
       {tasks.map((task) => (
-        <div className="col-md-6 col-lg-4" key={task._id}>
+        <div className="" key={task._id}>
           <TaskCard task={task} />
         </div>
       ))}

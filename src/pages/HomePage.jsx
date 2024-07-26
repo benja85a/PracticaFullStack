@@ -1,8 +1,15 @@
+import HelpCard from "../components/HelpCard";
+import QnACard from "../components/QnaCard/index.jsx";
+import DashboardStats from "../components/StatsCArd.jsx";
 
 const HomePage = () => {
   return (
-    <div className='m-5'>HomePage</div>
-  )
-}
+    <div className="container">
+      <DashboardStats></DashboardStats>
+      <HelpCard></HelpCard>
+      <QnACard></QnACard>
+    </div>
+  );
+};
 
-export default HomePage
+export default HomePage;

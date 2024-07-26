@@ -1,4 +1,5 @@
-import "bootstrap/dist/css/bootstrap.min.css";
+import 'bootstrap/dist/css/bootstrap.min.css';
+import 'bootstrap/dist/js/bootstrap.bundle.min.js';
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import RegisterPage from "./pages/RegisterPage";
 import LoginPage from "./pages/LoginPage";
@@ -20,12 +21,12 @@ const App = () => {
             <Navbar />
           <main className="container-fluid ">
             <Routes>
-              <Route path="/" element={<HomePage />} />
               <Route path="/login" element={<LoginPage />} />
               <Route path="/register" element={<RegisterPage />} />
-              <Route path="/Movies" element={<MovieSearch />} />
 
               <Route element={<ProtectedRoute />}>
+              <Route path="/Movies" element={<MovieSearch />} />
+              <Route path="/" element={<HomePage />} />
                 <Route path="/tasks" element={<TaskPage />} />
                 <Route path="/add-task" element={<TaskFormPage />} />
                 <Route path="/tasks/:id" element={<TaskFormPage />} />

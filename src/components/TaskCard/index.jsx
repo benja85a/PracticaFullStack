@@ -8,8 +8,8 @@ days.extend(utc);
 const TaskCard = ({ task }) => {
   const { deleteTask } = useTasks();
   return (
-    <div className="card my-2">
-      <div className="card-body">
+    <div className="card my-2 m-2">
+      <div className="card-body p-4">
         <h5 className="card-title">{task.title}</h5>
         <p className="card-text">{task.description}</p>
         <p className="card-text">

@@ -7,8 +7,8 @@ const Navbar = () => {
   const { isAuthenticated, logout, user } = useAuth();
 
   return (
-    <nav className="navbar navbar-expand-lg navbar-light border border-secondary rounded">
-      <div className="container">
+    <nav className="navbar navbar-expand-lg navbar-dark bg-dark border rounded mx-3">
+      <div className="container-fluid">
         <Link to={isAuthenticated ? "/tasks" : "/"} className="navbar-brand">
           Tasks Manager
         </Link>
@@ -18,16 +18,16 @@ const Navbar = () => {
             {isAuthenticated ? (
               <>
                 <li className="nav-item">
-                  <span className="nav-link">Welcome User {user.username}</span>
+                  <span className="nav-link">Welcome, {user.username}</span>
                 </li>
                 <li className="nav-item">
-                  <Link className="btn btn-primary me-2" to="/add-task">
+                  <Link className="btn btn-outline-primary me-2" to="/add-task">
                     Add Task
                   </Link>
                 </li>
                 <li className="nav-item">
                   <button
-                    className="btn btn-danger"
+                    className="btn btn-outline-danger"
                     onClick={() => {
                       logout();
                     }}
@@ -39,12 +39,12 @@ const Navbar = () => {
             ) : (
               <>
                 <li className="nav-item">
-                  <Link className="btn btn-primary me-2" to="/login">
+                  <Link className="btn btn-outline-primary me-2" to="/login">
                     Login
                   </Link>
                 </li>
                 <li className="nav-item">
-                  <Link className="btn btn-primary" to="/register">
+                  <Link className="btn btn-outline-primary" to="/register">
                     Register
                   </Link>
                 </li>

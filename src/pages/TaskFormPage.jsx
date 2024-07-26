@@ -23,7 +23,7 @@ const TaskFormPage = () => {
       }
     }
     loadTask()
-  }, [])
+  }, [getTask, params.id, setValue])
 
   const onSubmit = handleSubmit((data) => {
     const dataValid = {
@@ -42,10 +42,10 @@ const TaskFormPage = () => {
 
   return (
     <div className="container mt-5">
-      <div className="row justify-content-center">
+      <div className="justify-content-center">
         <form
           onSubmit={onSubmit}
-          className="col-md-8 bg-light p-4 border rounded row"
+          className="col-md-8 bg-light p-4 border rounded"
         >
           <input
             type="text"

@@ -1,19 +1,41 @@
 /* Navbar.css */
 .navbar-brand {
-    font-weight: bold;
-  }
-  .navbar{
-    background-color: darkgrey;
-    border-radius: 2px;
-  }
-  
-  .navbar-nav .nav-link {
-    padding: 0.5rem 1rem;
-  }
-  
-  @media (max-width: 767.98px) {
-    .navbar-nav .nav-link {
-      padding: 0.5rem;
-    }
-  }
-  
+  font-size: 1.5rem;
+}
+
+.navbar-nav .nav-item {
+  margin-right: 10px;
+}
+
+.navbar-nav .nav-link {
+  font-size: 1rem;
+}
+
+.navbar-nav .btn {
+  font-size: 1rem;
+}
+
+/* Estilos para cuando el usuario está autenticado */
+.navbar-nav .nav-item span {
+  font-weight: bold;
+}
+
+.navbar-nav .btn-outline-primary {
+  color: #007bff;
+  border-color: #007bff;
+}
+
+.navbar-nav .btn-outline-primary:hover {
+  background-color: #007bff;
+  color: white;
+}
+
+.navbar-nav .btn-outline-danger {
+  color: #dc3545;
+  border-color: #dc3545;
+}
+
+.navbar-nav .btn-outline-danger:hover {
+  background-color: #dc3545;
+  color: white;
+}
